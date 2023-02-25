@@ -1,26 +1,20 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { KanbanComponent } from '@syncfusion/ej2-react-kanban';
+import { ColumnDirective, ColumnsDirective } from '@syncfusion/ej2-react-kanban/src';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+      return(<KanbanComponent>
+        <ColumnsDirective>
+        <ColumnDirective> headerText='To Do' keyField="Open" </ColumnDirective>
+        <ColumnDirective> headerText='In Progress' keyField="In Progress" </ColumnDirective>
+        <ColumnDirective> headerText='Testing' keyField="Testing" </ColumnDirective>
+        <ColumnDirective> headerText='Close' keyField="Close" </ColumnDirective>
+        </ColumnsDirective>
+      </KanbanComponent>);
+  }
 }
 
 export default App;
