@@ -1,4 +1,6 @@
 import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
 import logo from './logo.svg';
 import './App.css';
 import { ColumnDirective, ColumnsDirective, KanbanComponent } from '@syncfusion/ej2-react-kanban/src';
